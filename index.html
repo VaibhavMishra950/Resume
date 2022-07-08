@@ -14,7 +14,7 @@
   <meta property="og:site_name" content="ItsVaibhav" />
 
   <!-- SEO Tags -->
-  <link rel="icon" href="favicon.png">
+  <link rel="icon" href="img/logo.png">
   <title>Hey, Its Vaibhav</title>
   <meta name="description" content="Student, BCA (Hons.), Makhanlal Chaturvedi University, Bhopal">
   <meta name="robots" content="index, follow">
@@ -23,16 +23,29 @@
   
 
   <link rel="stylesheet" href="style.css">
-  <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+  <link href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css" rel="stylesheet">
+
 </head>
 
 <body>
+  <div class="bg">
+    <img class="bg-left" src="img/gradient-left-dark.svg" alt="">
+    <img class="bg-right" src="img/gradient-right-dark.svg" alt="">
+  </div>
+
+  <nav>
+    <div class="logo">
+      <img src="img/logo-header.png" alt="Logo">
+    </div>
+  </nav>
+
+
   <div class="box">
 
     <div class="profile">
       <div>
-        <img src="pic.jpg" alt="Vaibhav Mishra">
-        <div class="name">
+        <img src="img/pic.jpg" alt="Vaibhav Mishra">
+        <div class="name" id="quote">
           <h2>Vaibhav Mishra</h2>
           <p>Student - BCA (Honours) <br>Makhanlal Chaturvedi University, Bhopal </p>
           <a href="https://github.com/VaibhavMishra950/" target="_blank" class="profileBtn">Github Profile</a>
@@ -142,103 +155,24 @@
         <li data-marker="🏠  "> Bhopal, Madhya Pradesh</li>
         <li data-marker="📧  "> mishravaibhav950@gmail.com</li>
         <li data-marker="📞  "> +91 97******12</li>
-
       </ul>
     </div>
 
 
-    <div class="footer"></div>
+    <div class="footer animatable">
+      <span><a href="https://github.com/VaibhavMishra950/Resume" target="_blank"><i class="fa-duotone fa-code"></i> View Source</a></span>
+      <div class="links">
+        <a href="https://github.com/VaibhavMishra950" target="_blank"><i class="fa-brands fa-github"></i></a> 
+        <a href="https://www.instagram.com/vaibhavmishra09" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.twitter.com/Vaibhav83631875" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/vaibhav-mishra-1907341a6" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/CSSPlugin.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-  <script type="text/javascript">
-
-    let mainDiv = document.querySelector(".box");
-    let allDivs = document.querySelectorAll(".box>div.animatable");
-    let scrollerDiv = document.querySelector('#scrollDiv');
-
-    scrollerDiv.addEventListener('click', () => {
-
-      if (window.scrollY == 0) {
-        window.scrollBy(0, 400)
-      }
-    });
-
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.registerPlugin(CSSPlugin);
-
-    gsap.to(mainDiv, {
-      left: 0,
-      opacity: 1,
-      duration: 0.75,
-      ease: "power4.in"
-    });
-
-    allDivs.forEach(element => {
-      gsap.to(element, {
-        scrollTrigger: {
-          trigger: element,
-          toggleActions: "restart none none reset",
-          start: "top 95%"
-        },
-        opacity: 1,
-        top: 0,
-        duration: 0.75,
-        ease: "power4.in"
-      });
-    });
-    gsap.to(".skillList .skillItem:nth-child(1) div:nth-child(2) div", {
-      scrollTrigger: {
-        trigger: ".skillItem:nth-child(1)",
-        toggleActions: "restart none none reset",
-        start: "top 95%",
-      },
-      width: "95%"
-    });
-    gsap.to(".skillList .skillItem:nth-child(2) div:nth-child(2) div", {
-      scrollTrigger: {
-        trigger: ".skillItem:nth-child(2)",
-        toggleActions: "restart none none reset",
-        start: "top 95%",
-      },
-      width: "85%"
-    });
-    gsap.to(".skillList .skillItem:nth-child(3) div:nth-child(2) div", {
-      scrollTrigger: {
-        trigger: ".skillItem:nth-child(3)",
-        toggleActions: "restart none none reset",
-        start: "top 95%",
-      },
-      width: "75%"
-    });
-    gsap.to(".skillList .skillItem:nth-child(4) div:nth-child(2) div", {
-      scrollTrigger: {
-        trigger: ".skillItem:nth-child(4)",
-        toggleActions: "restart none none reset",
-        start: "top 95%",
-      },
-      width: "80%"
-    });
-    gsap.to(".skillList .skillItem:nth-child(5) div:nth-child(2) div", {
-      scrollTrigger: {
-        trigger: ".skillItem:nth-child(5)",
-        toggleActions: "restart none none reset",
-        start: "top 95%",
-      },
-      width: "90%"
-    });
-    gsap.to(".skillList .skillItem:nth-child(6) div:nth-child(2) div", {
-      scrollTrigger: {
-        trigger: ".skillItem:nth-child(6)",
-        toggleActions: "restart none none reset",
-        start: "top 95%"
-      },
-      width: "93%"
-    });
-
-
-  </script>
+  <script src="index.js"></script>
 </body>
 
 </html>
