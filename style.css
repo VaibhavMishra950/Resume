@@ -17,8 +17,8 @@ height: 5%;
 }
 
 ::selection{
-  color: #3a52e6;
-  background: white;
+  color: white;
+  background: #690169;
 }
 
 html {
@@ -194,6 +194,7 @@ nav .logo img{
 }
 
 .profile .profileBtn {
+  position: relative;
   padding: 5px 15px;
   border: 2px solid #3a52e6;
   width: 110px;
@@ -208,6 +209,7 @@ nav .logo img{
   background: #3a52e6;
   color: black;
   box-shadow: 0 5px 50px #3a52e6;
+  transform: translateY(-5px);
 }
 
 .education {
@@ -366,6 +368,7 @@ nav .logo img{
   align-items: center;
   flex-direction: column;
   user-select: none;
+  filter: blur(20px);
 }
 .footer span a{
   font-size: 18px;

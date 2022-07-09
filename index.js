@@ -3,6 +3,7 @@ let mainDiv = document.querySelector(".box");
 let allDivs = document.querySelectorAll(".box>div.animatable");
 let scrollerDiv = document.querySelector('#scrollDiv');
 let headerImg = document.querySelector('nav>.logo>img');
+let footer = document.querySelector('.footer');
 
 
 scrollerDiv.addEventListener('click', () => {
@@ -43,6 +44,18 @@ allDivs.forEach(element => {
         ease: "power4.in"
     });
 });
+
+gsap.to(footer, {
+    scrollTrigger: {
+        trigger: footer,
+        toggleActions: "restart none none reset",
+        start: "top 95%"
+    },
+    filter: "none",
+    duration: 0.75,
+    ease: "power4.in"
+});
+
 gsap.to(".skillList .skillItem:nth-child(1) div:nth-child(2) div", {
     scrollTrigger: {
         trigger: ".skillItem:nth-child(1)",
