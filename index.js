@@ -104,3 +104,25 @@ gsap.to(".skillList .skillItem:nth-child(6) div:nth-child(2) div", {
     },
     width: "93%"
 });
+
+
+let bgLeft = document.querySelector('.bg-left')
+
+window.onscroll = function(){
+    if (window.scrollY < 590){
+        bgLeft.style.filter = 'saturate(1.5) hue-rotate(0deg)';
+    }
+    else if(window.scrollY < 990){
+        bgLeft.style.filter = 'saturate(1.5) hue-rotate(180deg)';
+    }
+    else if(window.scrollY < 1240){
+        bgLeft.style.filter = 'saturate(1.5) hue-rotate(90deg)';
+    }
+    else if(window.scrollY < 1570){
+        bgLeft.style.filter = 'saturate(1.5) hue-rotate(240deg)';
+    }
+    else{
+        bgLeft.style.filter = 'saturate(1.5) hue-rotate(45deg)';
+    }
+}
+
