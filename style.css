@@ -1,24 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   transition: 0.5s;
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
 }
-::-webkit-scrollbar{
+
+h1, h2{
+  font-family: 'Work Sans', sans-serif;
+}
+
+
+::-webkit-scrollbar {
   width: 15px;
   background: #212529;
 }
-::-webkit-scrollbar-thumb{
-  background: #444;
-height: 5%;
-}
 
-::selection{
-  color: white;
-  background: #690169;
+::-webkit-scrollbar-thumb {
+  background: #444;
+  height: 5%;
 }
 
 html {
@@ -29,7 +32,7 @@ body {
   background: #000;
 }
 
-.bg{
+.bg {
   position: fixed;
   top: 0;
   left: 0;
@@ -38,19 +41,21 @@ body {
   z-index: -999;
   display: flex;
 }
-.bg .bg-left{
+
+.bg .bg-left {
   position: relative;
   top: 200px;
   left: 0;
   filter: saturate(1.5);
 }
-.bg .bg-right{
+
+.bg .bg-right {
   position: relative;
   top: -50px;
   right: 0;
 }
 
-nav{
+nav {
   position: fixed;
   width: 100%;
   height: 76px;
@@ -59,14 +64,15 @@ nav{
   backdrop-filter: saturate(200%) blur(16px);
 }
 
-nav .logo{
+nav .logo {
   display: flex;
   height: 100%;
   align-items: center;
   justify-content: center;
   user-select: none;
 }
-nav .logo img{
+
+nav .logo img {
   height: 60.4px;
   filter: blur(15px);
   transform: scaleX(1.2) scaleY(1.2);
@@ -94,6 +100,7 @@ nav .logo img{
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .profile>div {
@@ -111,13 +118,15 @@ nav .logo img{
 
 .scrollText {
   letter-spacing: 3px;
+  color: #6649e8;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .scroller {
   width: 30px;
   height: 30px;
-  border-left: 3px solid white;
-  border-bottom: 3px solid white;
+  border-left: 3px solid #6649e8;
+  border-bottom: 3px solid #6649e8;
   transform: rotate(-45deg);
   animation: fader 1s infinite;
 }
@@ -129,8 +138,8 @@ nav .logo img{
   left: -13px;
   height: 100%;
   width: 100%;
-  border-left: 3px solid #3a52e6;
-  border-bottom: 3px solid #3a52e6;
+  border-left: 3px solid #6649e8;
+  border-bottom: 3px solid #6649e8;
   animation: fader 1s infinite;
   animation-delay: 0.33s;
 }
@@ -142,8 +151,8 @@ nav .logo img{
   left: -23px;
   height: 100%;
   width: 100%;
-  border-left: 3px solid #3a52e6;
-  border-bottom: 3px solid #3a52e6;
+  border-left: 3px solid #6649e8;
+  border-bottom: 3px solid #6649e8;
   animation: fader 1s infinite;
   animation-delay: 0.66s;
 }
@@ -152,16 +161,16 @@ nav .logo img{
 
   0%,
   100% {
-    border-color: #3a52e6;
+    border-color: rgb(102, 73, 232);
   }
 
   25%,
   75% {
-    border-color: rgba(65, 105, 225, 0.699);
+    border-color: rgba(102, 73, 232, 0.699);
   }
 
   50% {
-    border-color: rgba(65, 105, 225, 0.445);
+    border-color: rgba(102, 73, 232, 0.445);
   }
 }
 
@@ -182,9 +191,11 @@ nav .logo img{
 }
 
 .profile h2 {
+  background-image: linear-gradient(315deg, #2eaafa, #8c04db);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 3em;
-  color: #bbc1e5;
-  text-shadow: 0 0 15px #3a52e6;
 }
 
 .profile p {
@@ -196,20 +207,23 @@ nav .logo img{
 .profile .profileBtn {
   position: relative;
   padding: 5px 15px;
-  border: 2px solid #3a52e6;
-  width: 110px;
+  border: 2px solid #6649e8;
+  width: 111px;
   text-decoration: none;
   font-weight: 900;
-  color: #3a52e6;
+  color: #6649e8;
   border-radius: 20px;
+  transition: 0.2s;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 17px;
 }
 
 
 .profile .profileBtn:hover {
-  background: #3a52e6;
+  background: #6649e8;
   color: black;
-  box-shadow: 0 5px 50px #3a52e6;
-  transform: translateY(-5px);
+  box-shadow: 0 5px 50px #6649e8;
+  transform: translateY(-3px);
 }
 
 .education {
@@ -217,7 +231,10 @@ nav .logo img{
 }
 
 .education h1 {
-  color: #3a52e6;
+  background-image: linear-gradient(rgb(94, 162, 239) 25%, rgb(0, 114, 245) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 3em;
 }
 
@@ -230,12 +247,26 @@ nav .logo img{
   margin: 30px 0px;
   font-size: 1.5em;
 }
+.education ul li::marker{
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 300;
+  content: '\f549   ';
+  color: #4193f1;
+  white-space: pre;
+}
+.education ul li:last-child::marker{
+  content: '\f19d   ';
+}
+
 .skills {
   color: white;
 }
 
 .skills h1 {
-  color: #3a52e6;
+  background-image: linear-gradient(rgb(243, 101, 52) 25%, rgb(246, 159, 39) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 3em;
 }
 
@@ -260,6 +291,7 @@ nav .logo img{
 .skills .skillList .skillItem div:nth-child(2) {
   width: 63%;
   background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
   border-radius: 40px;
 }
 
@@ -286,7 +318,10 @@ nav .logo img{
 }
 
 .hobbies h2 {
-  color: #3a52e6;
+  background-image: linear-gradient(rgb(255, 28, 247) 25%, rgb(178, 73, 248) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 3em;
 }
 
@@ -299,13 +334,31 @@ nav .logo img{
   margin: 20px 0px;
   font-size: 1.5em;
 }
+.hobbies ul li::marker{
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 300;
+  color: #e62bf7;
+  white-space: pre;
+}
+.hobbies ul li:nth-child(1)::marker{
+  content: '\f001   ';
+}
+.hobbies ul li:nth-child(2)::marker{
+  content: '\f121   ';
+}
+.hobbies ul li:nth-child(3)::marker{
+  content: '\f45b   ';
+}
 
 .projects {
   color: white;
 }
 
 .projects h2 {
-  color: #3a52e6;
+  background-image: linear-gradient(rgb(111, 238, 141) 25%, rgb(23, 201, 100) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 3em;
 }
 
@@ -318,21 +371,45 @@ nav .logo img{
   margin: 20px 0px;
   font-size: 1.5em;
 }
-.projects ul li a{
+.projects ul li::marker{
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 300;
+  color: #53e280;
+  white-space: pre;
+}
+
+.projects ul li:nth-child(1)::marker{
+  content: '\f1ea   ';
+}
+.projects ul li:nth-child(2)::marker{
+  content: '\f8ce   ';
+}
+.projects ul li:nth-child(3)::marker{
+  content: '\e1da   ';
+}
+.projects ul li:nth-child(4)::marker{
+  content: '\f866   ';
+}
+.projects ul li:nth-child(5)::marker{
+  content: '\f37e   ';
+}
+
+.projects ul li a {
   color: white;
   text-decoration: none;
 }
-.projects ul li a::after{
+
+.projects ul li a::after {
   font-family: "Font Awesome 6 Pro";
   font-weight: 300;
   content: "\f0c1";
   margin-left: 20px;
   opacity: 0;
   transition: 0.3s;
-  color: #3a52e6;
+  color: #53e280;
 }
 
-.projects ul li a:hover::after{
+.projects ul li a:hover::after {
   opacity: 0.7;
   margin-left: 10px;
 }
@@ -342,7 +419,10 @@ nav .logo img{
 }
 
 .contact h2 {
-  color: #3a52e6;
+  background-image: linear-gradient(#f2709c 25%, #ff9472 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 3em;
 }
 
@@ -358,7 +438,20 @@ nav .logo img{
 }
 
 .contact ul li::marker {
-  content: attr(data-marker);
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 300;
+  white-space: pre;
+  color: #f67c8d;
+}
+
+.contact ul li:nth-child(1)::marker {
+  content: '\f3c5   ';
+}
+.contact ul li:nth-child(2)::marker {
+  content: '\40   ';
+}
+.contact ul li:nth-child(3)::marker {
+  content: '\e11b   ';
 }
 
 .footer {
@@ -370,23 +463,27 @@ nav .logo img{
   user-select: none;
   filter: blur(20px);
 }
-.footer span a{
+
+.footer span a {
   font-size: 18px;
   color: white;
   text-decoration: none;
 
 }
-.footer .links{
+
+.footer .links {
   margin-top: 10px;
 }
-.footer .links a{
+
+.footer .links a {
   margin: 0 15px;
   font-size: 22px;
   color: #fff8;
   transition: 0.2s;
   transform: none;
 }
-.footer .links a:hover i{
+
+.footer .links a:hover i {
   color: #ffff;
   transition: 0.2s;
 }
@@ -401,21 +498,27 @@ nav .logo img{
     height: 100vh;
     text-align: center;
   }
+
   .profile>div {
     flex-direction: column;
   }
+
   .profile img {
     margin-right: 0;
   }
+
   .profile .profileBtn {
     margin: auto;
   }
+
   .profile .name {
     margin-top: 20px;
   }
+
   .profile h2 {
     font-size: 2.1em;
   }
+
   .profile p {
     font-size: 1.3em;
   }
@@ -487,16 +590,24 @@ nav .logo img{
     font-size: 1.2em;
   }
 
-  .bg{
+  .bg {
     flex-direction: column;
   }
-  .bg .bg-left{
+
+  .bg .bg-left {
     top: 500px;
     left: -50px;
   }
-  .bg .bg-right{
+
+  .bg .bg-right {
     top: -400px;
     right: -150px;
   }
 
+}
+
+::selection {
+  color: white;
+  -webkit-text-fill-color: white;
+  background: #4649ff;
 }
