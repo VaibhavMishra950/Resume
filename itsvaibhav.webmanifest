@@ -1,0 +1,16 @@
+{
+  "name": "Hey, Its Vaibhav",
+  "icons": [
+    {
+      "src": "/img/logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "https://itsvaibhav.me",
+  "background_color": "#190c34",
+  "display": "standalone",
+  "scope": "https://itsvaibhav.me",
+  "theme_color": "#190c34",
+  "description": "Student, BCA(Hons.), Makhanlal Chaturvedi University, Bhopal"
+}
